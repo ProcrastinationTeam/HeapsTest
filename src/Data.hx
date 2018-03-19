@@ -1,0 +1,1 @@
+private typedef IntIterator = haxe.macro.MacroType < [cdb.Module.build("data.cdb")] > ;

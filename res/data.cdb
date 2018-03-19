@@ -1,0 +1,46 @@
+{
+	"sheets": [
+		{
+			"name": "test",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "ID"
+				},
+				{
+					"typeStr": "1",
+					"name": "Text",
+					"display": null
+				},
+				{
+					"typeStr": "5:yes,no,maybe",
+					"name": "Enum",
+					"display": null
+				},
+				{
+					"typeStr": "10:man,woman,both",
+					"name": "sexuality",
+					"display": null
+				}
+			],
+			"lines": [
+				{
+					"ID": "ME",
+					"Text": "Myself",
+					"Enum": 0,
+					"sexuality": 1
+				},
+				{
+					"ID": "You",
+					"Text": "Youuuuuuu",
+					"Enum": 1,
+					"sexuality": 3
+				}
+			],
+			"separators": [],
+			"props": {}
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}
