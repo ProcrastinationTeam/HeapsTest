@@ -8,6 +8,7 @@ import h2d.Interactive;
 import h2d.Text;
 import h2d.TextInput;
 import h2d.Tile;
+import hxd.Event;
 import hxd.Res;
 import hxd.res.DefaultFont;
 import hxd.res.FontBuilder;
@@ -23,7 +24,7 @@ class Main2D extends hxd.App
 		var tile = Res.hxlogo.toTile();
 		tile.dx  = -150;
 		tile.dy  = -150;
-		for (i in 0...10000) {
+		for (i in 0...1000) {
 			var bmp = new Bitmap(tile, s2d);
 			bmp.x = s2d.width * Math.random();
 			bmp.y = s2d.height * Math.random();
@@ -50,6 +51,10 @@ class Main2D extends hxd.App
 		var i = new Interactive(tf.textWidth, tf.textHeight, tf);
 		i.onOver = function(_) { tf.alpha = 0.5; }
 		i.onOut = function(_) { tf.alpha = 1; }
+		i.onClick = function(event:Event) {trace(event); };
+		i.onWheel = function(event:Event) trace(event);
+		i.onKeyDown = function(event:Event) tf.text = String.fromCharCode(event.keyCode);
+		
 		//i.backgroundColor = 0x800000FF;
 		
 		var ti = new TextInput(DefaultFont.get(), s2d);
@@ -60,7 +65,13 @@ class Main2D extends hxd.App
 	
 	override function update(dt:Float) {
 		for (b in bmps) {
-			b.rotate(dt * 0.1);
+			b.rotate(dt * Math.random() / 100);
+			//b.move(Math.random(), Math.random());
+			b.x += Math.random();
+			if (b.x > s2d.width + 10) {
+				b.x = -10;
+			}
+			//b.y++;
 		}
 	}
 	

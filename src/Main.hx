@@ -173,6 +173,6 @@ class Main extends hxd.App
 // Télécharger HL https://hashlink.haxe.org/#download
 // Décompresser hl_release à côté de haxe et neko, et ajouter au Path
 // Faut haxe4 pour hashlink
-// haxe -hl output.hl -lib heaps -lib hldx -cp src -main Main
-// haxe -hl output.hl -lib heaps -lib hlsdl -cp src -main Main // build ok mais pas executable :/
+// haxe -hl output.hl -lib heaps -lib hldx -lib castle -cp src -main Main
+// haxe -hl output.hl -lib heaps -lib hlsdl -lib castle -cp src -main Main // build ok mais pas executable :/
 // hl output.hl
