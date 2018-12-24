@@ -4,7 +4,7 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\HeapsTest.js" />
+    <movie path="export\js\HeapsTest.js" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
@@ -19,7 +19,7 @@
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="" />
+    <option directives="debug" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="Main2D" />
@@ -28,8 +28,8 @@
   </build>
   <!-- haxelib libraries -->
   <haxelib>
-    <library name="-lib heaps" />
-    <library name="-lib castle" />
+    <library name="heaps" />
+    <library name="castle" />
   </haxelib>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
@@ -48,7 +48,7 @@
   <options>
     <option showHiddenPaths="False" />
     <option testMovie="OpenDocument" />
-    <option testMovieCommand="bin/index.html" />
+    <option testMovieCommand="export\js\index.html" />
   </options>
   <!-- Plugin storage -->
   <storage />

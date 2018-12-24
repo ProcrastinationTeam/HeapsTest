@@ -17,7 +17,7 @@ import h3d.scene.Mesh;
 import h3d.scene.Object;
 import hxd.Res;
 import hxd.fmt.pak.FileSystem;
-import hxd.fmt.pak.FileSystem.FileInput;
+//import hxd.fmt.pak.FileSystem.FileInput;
 import hxd.res.DefaultFont;
 import hxd.res.FontBuilder;
 import hxsl.Shader;

@@ -78,6 +78,9 @@ class Main2D extends hxd.App
 	static function main() 
 	{
 		Res.initEmbed();
+		#if debug
+		trace('debug mode');
+		#end
 		new Main2D();
 	}
 	
@@ -86,6 +89,19 @@ class Main2D extends hxd.App
 // Télécharger HL https://hashlink.haxe.org/#download
 // Décompresser hl_release à côté de haxe et neko, et ajouter au Path
 // Faut haxe4 pour hashlink
-// haxe -hl output.hl -lib heaps -lib hldx -cp src -main Main
-// haxe -hl output.hl -lib heaps -lib hlsdl -cp src -main Main // build ok mais pas executable :/
-// hl output.hl
+
+// Export JS : 
+// Garder export/index.html
+// # haxe --connect 6000 -lib heaps -lib castle -D debug -cp src -main Main2D -js export/js/HeapsTest.js
+
+// Export HL DirectX
+// Build ok, exe ok, pas avec le connect (à tester après redémarrage ou redémarrage du server)
+// # haxe -lib heaps -lib hldx -lib castle -cp src -main Main2D -hl export/hldx/output.hl
+// # haxe --connect 6000 -lib heaps -lib hldx -lib castle -cp src -main Main2D -hl export/hldx/output.hl
+// # hl export\hldx\output.hl
+
+// Export HL SDL
+// Build ok, exe pas ok
+// # haxe -lib heaps -lib hlsdl -lib castle -cp src -main Main2D -hl export/hlsdl/output.hl
+// # haxe --connect 6000 -lib heaps -lib hlsdl -lib castle -cp src -main Main2D -hl export/hlsdl/output.hl
+// # hl export\hlsdl\output.hl
